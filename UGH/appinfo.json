@@ -1,24 +1,19 @@
 {
-    "id": "com.domain.ugh",
-    "version": "1.0.0",
-    "vendor": "My Company",
-    "type": "web",
-    "main": "index.html",
-    "title": "UGH",
-    "icon": "icon.png",
-    "requiredPermissions": [
-        "all",
-        "time.query",
-        "activity.operation",
-        "camera"
-    ],
-    "permissions": [
-        "network",
-        "luna-send",
-        "com.webos.service.camera2",
-        "network.getstatus",
-        "network.connection",
-        "network.wifi",
-        "com.domain.ugh.mqtt"
-    ]
+  "id": "com.sgs.ugh",
+  "version": "1.0.0",
+  "vendor": "My Company",
+  "type": "web",
+  "main": "index.html",
+  "title": "UGH",
+  "icon": "icon.png",
+  "requiredPermissions": [
+    "time.query",
+    "activity.operation"
+  ],
+  "permissions": [
+    "network"
+  ],
+  "allowVideoCapture": true,
+  "allowAudioCapture": true,
+  "enableWebOSVDA": true
 }

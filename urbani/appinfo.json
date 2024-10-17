@@ -1,0 +1,25 @@
+{
+    "id": "com.ugh.urbani",
+    "version": "1.0.0",
+    "vendor": "My Company",
+    "type": "web",
+    "main": "index.html",
+    "title": "Urbani",
+    "icon": "icon.png",
+    "requiredPermissions": [
+        "time.query",
+        "activity.operation",
+        "camera",
+        "network",
+        "luna-send"
+    ],
+    "permissions": [
+        "com.webos.service.camera2",
+        "com.webos.service.sessionmanager",
+        "com.webos.service.applicationManager",
+        "luna-send"
+    ],
+    "allowVideoCapture": true,
+    "allowAudioCapture": true,
+    "enableWebOSVDA": true
+}

@@ -1,0 +1,21 @@
+{
+    "id": "com.domain.app",
+    "version": "1.0.0",
+    "vendor": "My Company",
+    "type": "web",
+    "main": "index.html",
+    "title": "MQTT",
+    "icon": "icon.png",
+    "requiredPermissions": [
+        "time.query",
+        "activity.operation",
+        "all"
+    ],
+    "permissions": [
+        "network",
+        "luna-send",
+        "com.webos.service.camera2",
+        "com.webos.service.sessionmanager",
+        "all"
+    ]
+}

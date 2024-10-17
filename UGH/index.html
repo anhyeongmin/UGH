@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카메라 프리뷰</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #videoElement {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid #000;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>카메라 프리뷰</h1>
+    <video id="videoElement" autoplay playsinline></video>
+    
+    <script>
+        function hasGetUserMedia() {
+            return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+        }
+
+        if (hasGetUserMedia()) {
+            console.log("getUserMedia() is 지원됩니다.");
+            var video = document.querySelector("#videoElement");
+            navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+                .then(function (stream) {
+                    video.srcObject = stream;
+                })
+                .catch(function (error) {
+                    console.error("카메라 접근 중 오류 발생: ", error);
+                });
+        } else {
+            console.error("getUserMedia()는 현재 브라우저에서 지원되지 않습니다.");
+        }
+    </script>
+</body>
+</html>

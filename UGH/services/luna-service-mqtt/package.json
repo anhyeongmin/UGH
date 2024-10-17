@@ -1,9 +1,0 @@
-{
-    "name": "luna_service_mqtt",
-    "version": "1.0.0",
-    "main": "index.js",
-    "dependencies": {
-      "async-mqtt": "^2.6.1",
-      "webos-service": "^1.0.0"
-    }
-  }

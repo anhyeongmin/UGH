@@ -1,0 +1,11 @@
+{
+    "id": "com.test.camera",
+    "version": "1.0.0",
+    "vendor": "My Company",
+    "type": "web",
+    "main": "index.html",
+    "title": "Camera Test",
+    "icon": "icon.png",
+    "requiredPermissions": ["camera.query", "camera.operation"],
+    "permissions": ["camera", "com.webos.service.camera2", "luna-send", "network"]
+}

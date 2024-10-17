@@ -1,0 +1,20 @@
+{
+    "id": "com.ugh.app.services",
+    "description": "UGH 서비스 모음",
+    "services": [
+      {
+        "id": "com.ugh.app.camera_service",
+        "name": "Camera Service",
+        "type": "webos",
+        "files": ["camera_service.js"]
+      },
+      {
+        "id": "com.ugh.app.toast_service",
+        "name": "Toast Service",
+        "type": "webos",
+        "files": ["toast_service.js"]
+      }
+    ]
+  }
+
+  

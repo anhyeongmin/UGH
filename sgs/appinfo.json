@@ -1,0 +1,26 @@
+{
+    "id": "com.ugh.app",
+    "version": "1.0.0",
+    "vendor": "My Company",
+    "type": "web",
+    "main": "index.html",
+    "title": "URBANI",
+    "icon": "icon.png",
+    "permissions": [
+        "camera",
+        "com.webos.service.camera2",
+        "luna-send",
+        "service.communication",
+        "service.monitor",
+        "activity.operation",
+        "com.webos.applicationManager",
+        "com.webos.service.sessionmanager"
+    ],
+    "requiredPermissions": [
+        "time.query",
+        "camera",
+        "luna-send",
+        "service.communication",
+        "service.monitor"
+    ]
+}
