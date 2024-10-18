@@ -1,0 +1,9 @@
+{
+    "id": "com.camera.app.service",
+    "description": "HelloWorld Service",
+    "services": [
+      {
+        "name": "com.camera.app.service"
+      }
+    ]
+  }
