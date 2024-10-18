@@ -25,7 +25,7 @@ const open = (id) => {
 			{
 				service: 'luna://com.webos.service.camera2',
 				method: 'open',
-				parameters: {id, priority: "primary"},
+				parameters: {id},
 				onSuccess: (res) => {
 					resolve(res.handle);
 				}
@@ -35,31 +35,27 @@ const open = (id) => {
 };
 
 const setFormat = (handle) => {
-	return new Promise((resolve, reject) => {
-		new LS2Request().send({
-			service: 'luna://com.webos.service.camera2',
-			method: 'setFormat',
-			parameters: {
-				handle,
-				params: {
-					width: 1280,
-					height: 720,
-					format: 'YUV',
-					fps: 10,
-					priority: 'secondary'
+	return new Promise((resolve) => {
+		new LS2Request().send(
+			{
+				service: 'luna://com.webos.service.camera2',
+				method: 'setFormat',
+				parameters: {
+					handle,
+					params: {
+						width: 1280,
+						height: 720,
+						format: 'JPEG',
+						fps: 10
+					}
+				},
+				onSuccess: () => {
+					resolve(handle);
 				}
-			},
-			onSuccess: () => {
-				resolve(handle);
-			},
-			onFailure: (error) => {
-				console.error('Failed to set format:', error);
-				reject(error);
 			}
-		});
+		);
 	});
 };
-
 
 const startPreview = (handle) => {
 	return new Promise((resolve) => {

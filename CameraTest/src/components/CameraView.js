@@ -18,16 +18,10 @@ const CameraView = () => {
 	let cameraOption;
 
 	useEffect(() => {
-		// 웹OS 시스템 확인 및 카메라 ID 리스트 가져오기
 		if (typeof window === 'object' && typeof (window.webOSSystem ?? window.PalmSystem) === 'object') {
 			dispatch(getCameraIds({}));
 		}
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-	useEffect(() => {
-		// camera1을 고정으로 선택하고 자동으로 카메라 시작
-		dispatch(startCamera('camera1'));
-	}, []); // 컴포넌트 마운트 시 한번만 실행
 
 	useEffect(() => {
 		if (videoRef.current) {
@@ -56,8 +50,10 @@ const CameraView = () => {
 			<Heading showLine>Camera List</Heading>
 			<VirtualList
 				dataSize={cameraIds.length}
+				// eslint-disable-next-line react/jsx-no-bind
 				itemRenderer={({index}) => (
 					<Item
+						// eslint-disable-next-line react/jsx-no-bind
 						onClick={() => {
 							dispatch(startCamera(cameraIds[index].id));
 						}}
@@ -75,6 +71,7 @@ const CameraView = () => {
 			<Column align="center">
 				<Button
 					size="small"
+					// eslint-disable-next-line react/jsx-no-bind
 					onClick={() => {
 						dispatch(closeCamera(cameraStatus.handle));
 					}}

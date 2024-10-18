@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'; 
-import css from './qr_service.module.less';
+import css from './qr_service.css';
 import { startCameraPreview } from '../../services/camera_service';
 import { showToast } from '../../services/toast_service';
 

@@ -1,1 +1,1 @@
-{"preReq":{"node":"20.18.0","nvm":"0.0.1","virtualbox":"7.0.18r162988"},"tv":{},"ose":{"ose_emulator_8":{"sdk_version":"2.26.0","location":"c:\\Workspace\\Enact\\webPack\\OSE\\Emulator\\v2.26.0","instName":"LG_webOS_OSE_Emulator_2.26.0"}}}
+{"preReq":{"python3":"3.12.4","brew":"4.3.14"},"tv":{},"ose":{}}

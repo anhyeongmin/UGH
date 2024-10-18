@@ -6,6 +6,10 @@
     "main": "index.html",
     "title": "Camera Test",
     "icon": "icon.png",
-    "requiredPermissions": ["camera.query", "camera.operation"],
-    "permissions": ["camera", "com.webos.service.camera2", "luna-send", "network"]
+    "requiredPermissions": [
+        "activity.operation",
+        "camera.query",
+        "camera.operation",
+        "all"
+    ]
 }
